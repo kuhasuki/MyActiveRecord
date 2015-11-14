@@ -1,3 +1,4 @@
+require 'byebug'
 require '01_sql_object'
 require 'db_connection'
 require 'securerandom'
@@ -111,7 +112,6 @@ describe SQLObject do
   describe '::find' do
     it '::find finds objects by id' do
       c = Cat.find(1)
-
       expect(c).not_to be_nil
       expect(c.name).to eq('Breakfast')
     end
